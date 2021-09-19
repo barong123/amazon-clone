@@ -43,9 +43,6 @@ const [{ basket, user }, dispatch] = useStateValue();
               price={234}
               rating={5}
              /> */}
-          {/* basket item */}
-          {/* basket item */}
-          {/* basket item */}
         </div>
       </div>
 

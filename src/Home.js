@@ -1,6 +1,6 @@
-import React from 'react'
-import './Home.css'
-import Product from './Product'
+import React from 'react';
+import './Home.css';
+import Product from './Product';
 
 function Home() {
   return (
@@ -40,7 +40,7 @@ function Home() {
         id='67989674'
         title='The Legend of Zelda: Skyward Sword HD - Nintendo Switch' 
         price={49.94} 
-        image='https://m.media-amazon.com/images/I/81y8cNk-v1L._SL1500_.jpg' 
+        image='https://images.tokopedia.net/img/cache/900/VqbcmM/2021/4/11/b4595cb8-b743-402d-8c0c-636633a130f7.jpg' 
         rating={5}
         />
       </div>

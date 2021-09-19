@@ -8,6 +8,13 @@ import Login from './Login';
 import { useEffect } from 'react';
 import { auth } from './firebase';
 import { useStateValue } from './StateProvider';
+import Payment from './Payment';
+import { loadStripe } from '@stripe/stripe-js';
+import { Elements } from '@stripe/react-stripe-js';
+import Orders from './Orders';
+
+const promise = loadStripe(
+  'pk_test_51JZe1aCSupV8rhrjW46KSXZ7p4uT2oLLeoWJBIyLlGQSaGxdob3Sl1uSoOIfQray16zlNzyt5PelasZJCnK8EQAX00gr32y1bV');
 
 function App() {
   // eslint-disable-next-line no-empty-pattern
@@ -32,6 +39,7 @@ function App() {
         })
       }
     })
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   return (
@@ -44,10 +52,20 @@ function App() {
             <Login />
           </Route>
 
-
           <Route path='/checkout'>
             <Header />
             <Checkout />
+          </Route>
+
+          <Route path='/payment'>
+            <Header />
+            <Elements stripe={promise}>
+              <Payment />
+            </Elements>
+          </Route>
+
+          <Route path='/orders'>
+            <Orders />
           </Route>
 
           <Route path='/'>

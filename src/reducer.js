@@ -36,6 +36,13 @@ const reducer = (state, action) => {
     }
   }
 
+  if (action.type === 'EMPTY_BASKET') {
+    return {
+      ...state,
+      basket: [],
+    }
+  }
+
   if (action.type === 'SET_USER') {
     return {
       ...state,

@@ -6,8 +6,6 @@ function Product({ id, title, image, price, rating }) {
   // eslint-disable-next-line no-unused-vars
   const [{ basket }, dispatch] = useStateValue();
 
-  // console.log(basket[0].price);
-
   const addToBasket = () => {
     // dispacth the item into the data layer
     dispatch({
@@ -23,7 +21,7 @@ function Product({ id, title, image, price, rating }) {
   }
 
   return (
-    <div className='product'>
+    <div className='product hvr-grow'>
       <div className='product__info'>
         <p>{title}</p>
         <p className='product__price'>
